@@ -47,7 +47,7 @@ const FeaturedOfferingsSection = () => {
       title: "Products Ad Creator Agent",
       description: "AI-powered content creation for social media, blogs, and marketing materials.",
 
-      demoUrl: "https://x.com/use_jarvis/status/2008091984544833823?s=20"
+      demoUrl: "https://x.com/use_jarvis/status/2012083133244674364?s=20"
     }
   ];
 
