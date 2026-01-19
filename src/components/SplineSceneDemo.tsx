@@ -6,15 +6,15 @@ import { Spotlight } from "@/components/ui/spotlight"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
- 
+
 export function SplineSceneDemo() {
   const handleScrollToFeatures = (e: React.MouseEvent) => {
     e.preventDefault();
     const element = document.getElementById('featured-offerings');
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start' 
+        block: 'start'
       });
     }
   };
@@ -25,10 +25,10 @@ export function SplineSceneDemo() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      
+
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] bg-[size:64px_64px] opacity-30"></div>
-      
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8">
           {/* Left content */}
@@ -36,15 +36,15 @@ export function SplineSceneDemo() {
             <div className="inline-flex items-center rounded-lg bg-white/10 px-3 py-1 text-sm font-medium text-white mb-6">
               🤖 AI-Powered Business Solutions
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               AI Infrastructure to Scale Your Business Without Hiring </h1>
-            
+
             <p className="text-lg text-neutral-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Our AI Infra drive upto 40% cost savings while increasing efficiency by reducing manual work across business processes.</p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <Button 
+              <Button
                 onClick={handleScrollToFeatures}
                 size="lg"
                 className="bg-white text-black px-8 py-3 text-base font-medium shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-gray-100 group"
@@ -52,14 +52,14 @@ export function SplineSceneDemo() {
                 Explore Features
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform ml-2" />
               </Button>
-              
-              <Button 
+
+              <Button
                 asChild
-                variant="outline" 
+                variant="outline"
                 size="lg"
                 className="border-white/20 text-black hover:bg-gray/10 px-8 py-3 text-base font-medium transition-all duration-300 group"
               >
-                <Link 
+                <Link
                   href="https://x.com/use_jarvis/status/2006742876831801500?s=20"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,32 +70,18 @@ export function SplineSceneDemo() {
                 </Link>
               </Button>
             </div>
-            
-            {/* Stats */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">50+</div>
-                <div className="text-sm text-neutral-400">AI Agents</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">1000+</div>
-                <div className="text-sm text-neutral-400">Automations</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-sm text-neutral-400">Support</div>
-              </div>
-            </div>
+
+
           </div>
 
           {/* Right content - Spline Scene */}
           <div className="flex-1 relative min-h-[400px] w-full">
             <div className="relative w-full h-[500px] rounded-2xl overflow-hidden bg-white/5 border border-white/10">
-              <SplineScene 
+              <SplineScene
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
               />
-              
+
               {/* Overlay glow effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
             </div>
