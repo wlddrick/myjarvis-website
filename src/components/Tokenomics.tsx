@@ -26,7 +26,7 @@ const Tokenomics = () => {
   ];
 
   return (
-    <section id="tokenomics" className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="tokenomics" className="w-full py-4 md:py-8 lg:py-10 bg-gradient-to-b from-background to-muted/20">
       <div className="container px-4 md:px-6">
         {/* Token Distribution Section */}
         <div className="text-center mb-16">
@@ -141,13 +141,7 @@ const Tokenomics = () => {
                     Generated through Agents as a service, Automations as one time buy, and other premium features
                   </p>
                 </CardContent>
-                {/* Arrow pointing right on desktop */}
-                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-foreground"></div>
-                  <div className="absolute right-0 top-0 transform translate-x-1 -translate-y-1">
-                    <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
-                  </div>
-                </div>
+
               </Card>
 
               {/* Buyback Mechanism */}
@@ -163,13 +157,7 @@ const Tokenomics = () => {
                     A percentage of profit generated is used to purchase tokens from the market
                   </p>
                 </CardContent>
-                {/* Arrow pointing right on desktop */}
-                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-foreground"></div>
-                  <div className="absolute right-0 top-0 transform translate-x-1 -translate-y-1">
-                    <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
-                  </div>
-                </div>
+
               </Card>
 
               {/* Burn Mechanism */}
@@ -188,21 +176,7 @@ const Tokenomics = () => {
               </Card>
             </div>
 
-            {/* Mobile arrows */}
-            <div className="md:hidden flex flex-col items-center my-6 space-y-4">
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-0.5 bg-foreground"></div>
-                <div className="transform rotate-90">
-                  <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-0.5 bg-foreground"></div>
-                <div className="transform rotate-90">
-                  <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

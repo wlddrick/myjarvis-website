@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import {
   Dialog,
   DialogContent,
@@ -73,7 +74,7 @@ Best regards,`
   };
 
   return (
-    <section id="featured-offerings" className="w-full py-8 md:py-16 lg:py-20 bg-background">
+    <section id="featured-offerings" className="w-full py-4 md:py-8 lg:py-10 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
@@ -85,22 +86,32 @@ Best regards,`
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredOfferings.map(offering => (
-            <Card key={offering.id} className="flex flex-col h-full">
-              <CardHeader>
-                <CardTitle className="text-xl">{offering.title}</CardTitle>
-                <CardDescription className="text-sm">{offering.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col justify-between">
-                <div className="flex flex-col gap-2">
-                  <Button className="w-full" onClick={() => handleBookDemo(offering)}>Book a Live Demo</Button>
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href={offering.demoUrl} target="_blank" rel="noopener noreferrer">
-                      Watch Demo
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div key={offering.id} className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={3}
+              />
+              <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-[0.75px] bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
+                <CardHeader>
+                  <CardTitle className="text-xl">{offering.title}</CardTitle>
+                  <CardDescription className="text-sm">{offering.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <div className="flex flex-col gap-2">
+                    <Button className="w-full" onClick={() => handleBookDemo(offering)}>Book a Live Demo</Button>
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link href={offering.demoUrl} target="_blank" rel="noopener noreferrer">
+                        Watch Demo
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
         <div className="flex justify-center mt-12">

@@ -22,7 +22,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
+    <section className="w-full py-4 md:py-8 lg:py-10 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
