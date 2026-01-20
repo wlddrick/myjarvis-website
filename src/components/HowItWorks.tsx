@@ -11,7 +11,7 @@ const steps = [
   {
     icon: Settings,
     title: "Easy Setup & Customization",
-    description: "Integrate your chosen AI with simple setup wizards and customize it to fit your unique workflow.",
+    description: "We integrate your chosen AI into your existing infrastructure, ensuring it fits smoothly into your established workflows.",
   },
   {
     icon: Rocket,
