@@ -1,6 +1,8 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+'use client'
+
+import { motion } from "framer-motion";
 import { Brain, Zap, ShieldCheck, Scale, TrendingUp, Clock } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const features = [
   {
@@ -39,27 +41,41 @@ const Features = () => {
   return (
     <section className="w-full py-6 md:py-12 lg:py-16 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
+        >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose My Jarvis?</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Unlock unparalleled efficiency and innovation with our cutting-edge AI solutions.
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Card key={index} className="flex flex-col items-center text-center p-6">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-                <feature.icon className="h-8 w-8" />
-              </div>
-              <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription>{feature.description}</CardDescription>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="flex flex-col items-center text-center h-full p-6">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
+                  <feature.icon className="h-8 w-8" />
+                </div>
+                <CardHeader className="p-0 mb-2">
+                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
