@@ -49,7 +49,7 @@ const Header = () => {
                   className="rounded-lg object-contain"
                   unoptimized
                 />
-                <span className="font-bold text-xl text-black">
+                <span className="font-bold text-xl text-foreground">
                   My Jarvis
                 </span>
               </div>
@@ -62,12 +62,12 @@ const Header = () => {
               text="0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8"
               displayText="Contract 0xeC..."
               variant="ghost"
-              className="hover:bg-gray-100"
+              className="hover:bg-accent"
             />
-            <Button variant="ghost" className="hover:bg-gray-100" onClick={handleScrollToTokenomics}>
+            <Button variant="ghost" className="hover:bg-accent" onClick={handleScrollToTokenomics}>
               Tokenomics
             </Button>
-            <Button asChild variant="ghost" className="hover:bg-gray-100">
+            <Button asChild variant="ghost" className="hover:bg-accent">
               <Link
                 href="https://app.virtuals.io/prototypes/0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
                 target="_blank"
@@ -77,7 +77,7 @@ const Header = () => {
               </Link>
             </Button>
             <Button
-              className="bg-black text-white hover:bg-gray-800"
+              className="bg-white text-black hover:bg-gray-200"
               onClick={handleOpenAppClick}
             >
               Open App
@@ -126,7 +126,7 @@ const Header = () => {
                 </Link>
               </Button>
               <Button
-                className="w-full bg-black text-white hover:bg-gray-800 text-lg"
+                className="w-full bg-white text-black hover:bg-gray-200 text-lg"
                 onClick={handleOpenAppClick}
               >
                 Open App

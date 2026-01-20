@@ -13,7 +13,7 @@ const Tokenomics = () => {
       color: "#1e293b"
     },
     {
-      name: "Team Locked Tokens for 1 year", 
+      name: "Team Locked Tokens for 1 year",
       value: 24,
       color: "#3b82f6"
     },
@@ -35,12 +35,12 @@ const Tokenomics = () => {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
             Token Distribution
           </h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Interactive Pie Chart */}
             <div className="relative mx-auto w-full max-w-md">
               <InteractivePieChart data={tokenDistributionData} />
-              
+
               {/* Legend */}
               <div className="mt-8 space-y-3">
                 <div className="flex items-center justify-center gap-3">
@@ -57,13 +57,13 @@ const Tokenomics = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Description */}
             <div className="text-left space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 This token distribution model is designed to ensure long-term stability and growth. A significant portion of tokens is allocated to public liquidity to facilitate trading and market access, while a strategic amount is locked to prevent early dilution. Marketing tokens are reserved to drive adoption and engagement within the ecosystem.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="p-4 bg-muted/50 rounded-lg">
                   <h4 className="font-semibold text-sm mb-2">Dev Wallet</h4>
@@ -71,19 +71,19 @@ const Tokenomics = () => {
                     0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8
                   </p>
                 </div>
-                
+
                 <div className="p-4 bg-muted/50 rounded-lg">
                   <h4 className="font-semibold text-sm mb-2">Marketing Wallet</h4>
                   <p className="text-sm font-mono text-muted-foreground break-all">
                     0x3ecb7498500b53da1d13e403c37c42fb1e2c685
                   </p>
                 </div>
-                
+
                 <div className="p-4 bg-primary/10 rounded-lg">
                   <h4 className="font-semibold text-sm mb-2">PinkLock 1 Year lock trx</h4>
-                  <a 
-                    href="https://www.pinksale.finance/pinklock/base/record/1028416" 
-                    target="_blank" 
+                  <a
+                    href="https://www.pinksale.finance/pinklock/base/record/1028416"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-primary hover:underline break-all"
                   >
@@ -103,19 +103,19 @@ const Tokenomics = () => {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
             The $JARVIS Ecosystem
           </h2>
-          
+
           <p className="text-lg text-muted-foreground mb-12 max-w-4xl mx-auto">
             Our innovative buyback and burn model creates a direct, sustainable connection between platform growth and token value appreciation.
           </p>
-          
+
           {/* Ecosystem Diagram - Simplified Grid Layout */}
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Platform Revenue */}
               <Card className="relative group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center mb-4">
-                    <TrendingUp className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                    <TrendingUp className="h-8 w-8 text-background" />
                   </div>
                   <CardTitle className="text-xl">Platform Revenue</CardTitle>
                 </CardHeader>
@@ -126,9 +126,9 @@ const Tokenomics = () => {
                 </CardContent>
                 {/* Arrow pointing right on desktop */}
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-black"></div>
+                  <div className="w-8 h-0.5 bg-foreground"></div>
                   <div className="absolute right-0 top-0 transform translate-x-1 -translate-y-1">
-                    <div className="w-0 h-0 border-l-4 border-l-black border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+                    <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
                   </div>
                 </div>
               </Card>
@@ -136,8 +136,8 @@ const Tokenomics = () => {
               {/* Buyback Mechanism */}
               <Card className="relative group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center mb-4">
-                    <DollarSign className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                    <DollarSign className="h-8 w-8 text-background" />
                   </div>
                   <CardTitle className="text-xl">Buyback Mechanism</CardTitle>
                 </CardHeader>
@@ -148,9 +148,9 @@ const Tokenomics = () => {
                 </CardContent>
                 {/* Arrow pointing right on desktop */}
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-black"></div>
+                  <div className="w-8 h-0.5 bg-foreground"></div>
                   <div className="absolute right-0 top-0 transform translate-x-1 -translate-y-1">
-                    <div className="w-0 h-0 border-l-4 border-l-black border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+                    <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
                   </div>
                 </div>
               </Card>
@@ -158,8 +158,8 @@ const Tokenomics = () => {
               {/* Burn Mechanism */}
               <Card className="group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center mb-4">
-                    <Flame className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                    <Flame className="h-8 w-8 text-background" />
                   </div>
                   <CardTitle className="text-xl">Burn Mechanism</CardTitle>
                 </CardHeader>
@@ -174,15 +174,15 @@ const Tokenomics = () => {
             {/* Mobile arrows */}
             <div className="md:hidden flex flex-col items-center my-6 space-y-4">
               <div className="flex flex-col items-center">
-                <div className="h-8 w-0.5 bg-black"></div>
+                <div className="h-8 w-0.5 bg-foreground"></div>
                 <div className="transform rotate-90">
-                  <div className="w-0 h-0 border-l-4 border-l-black border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+                  <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <div className="h-8 w-0.5 bg-black"></div>
+                <div className="h-8 w-0.5 bg-foreground"></div>
                 <div className="transform rotate-90">
-                  <div className="w-0 h-0 border-l-4 border-l-black border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+                  <div className="w-0 h-0 border-l-4 border-l-foreground border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
                 </div>
               </div>
             </div>

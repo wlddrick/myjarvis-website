@@ -57,7 +57,7 @@ export function SplineSceneDemo() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 text-black hover:bg-gray/10 px-8 py-3 text-base font-medium transition-all duration-300 group"
+                className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-base font-medium transition-all duration-300 group"
               >
                 <Link
                   href="https://x.com/use_jarvis/status/2006742876831801500?s=20"
