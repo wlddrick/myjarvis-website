@@ -4,6 +4,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, DollarSign, Flame } from 'lucide-react';
 import { InteractivePieChart } from "@/components/ui/interactive-pie-chart";
+import { CopyButton } from "@/components/ui/copy-button";
 
 const Tokenomics = () => {
   const tokenDistributionData = [
@@ -25,7 +26,7 @@ const Tokenomics = () => {
   ];
 
   return (
-    <section id="tokenomics" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/20">
+    <section id="tokenomics" className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container px-4 md:px-6">
         {/* Token Distribution Section */}
         <div className="text-center mb-16">
@@ -66,21 +67,37 @@ const Tokenomics = () => {
 
               <div className="space-y-4">
                 <div className="p-4 bg-muted/50 rounded-lg">
-                  <h4 className="font-semibold text-sm mb-2">Dev Wallet</h4>
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-sm">Dev Wallet</h4>
+                    <CopyButton
+                      text="0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8"
+                      displayText=""
+                      variant="ghost"
+                      className="h-8"
+                    />
+                  </div>
                   <p className="text-sm font-mono text-muted-foreground break-all">
                     0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8
                   </p>
                 </div>
 
                 <div className="p-4 bg-muted/50 rounded-lg">
-                  <h4 className="font-semibold text-sm mb-2">Marketing Wallet</h4>
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-sm">Marketing Wallet</h4>
+                    <CopyButton
+                      text="0x3ecb7498500b53da1d13e403c37c42fb1e2c685"
+                      displayText=""
+                      variant="ghost"
+                      className="h-8"
+                    />
+                  </div>
                   <p className="text-sm font-mono text-muted-foreground break-all">
                     0x3ecb7498500b53da1d13e403c37c42fb1e2c685
                   </p>
                 </div>
 
                 <div className="p-4 bg-primary/10 rounded-lg">
-                  <h4 className="font-semibold text-sm mb-2">PinkLock 1 Year lock trx</h4>
+                  <h4 className="font-semibold text-sm mb-2">1 Year locked tokens</h4>
                   <a
                     href="https://www.pinksale.finance/pinklock/base/record/1028416"
                     target="_blank"

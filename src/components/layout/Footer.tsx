@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -9,15 +10,20 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">J</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="My Jarvis Logo"
+                width={32}
+                height={32}
+                className="rounded-lg object-contain"
+                unoptimized
+              />
               <h3 className="font-bold text-xl text-white">
                 My Jarvis
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Transform your business with intelligent AI agents and powerful automations. 
+              Transform your business with intelligent AI agents and powerful automations.
               Empower your team with 24/7 AI assistants and streamlined workflows.
             </p>
             <div className="flex space-x-4">

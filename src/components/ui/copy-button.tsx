@@ -11,11 +11,11 @@ interface CopyButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
 }
 
-export const CopyButton: React.FC<CopyButtonProps> = ({ 
-  text, 
-  displayText, 
-  className = "", 
-  variant = "outline" 
+export const CopyButton: React.FC<CopyButtonProps> = ({
+  text,
+  displayText,
+  className = "",
+  variant = "outline"
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -44,9 +44,11 @@ export const CopyButton: React.FC<CopyButtonProps> = ({
       ) : (
         <>
           <Copy className="h-3 w-3" />
-          <span className="text-xs font-mono">
-            {displayText || `${text.slice(0, 6)}...${text.slice(-4)}`}
-          </span>
+          {displayText !== "" && (
+            <span className="text-xs font-mono">
+              {displayText ?? `${text.slice(0, 6)}...${text.slice(-4)}`}
+            </span>
+          )}
         </>
       )}
     </Button>
