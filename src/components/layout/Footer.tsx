@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { CopyButton } from "@/components/ui/copy-button";
 
 const Footer = () => {
   return (
@@ -69,9 +70,17 @@ const Footer = () => {
                 Join the ecosystem and benefit from our innovative buyback and burn mechanism.
               </p>
               <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700">
-                <p className="text-xs text-gray-400 mb-1">Contract Address:</p>
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-xs text-gray-400">Contract Address:</p>
+                  <CopyButton
+                    text="0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
+                    displayText=""
+                    variant="ghost"
+                    className="h-6 w-6 p-0 hover:bg-transparent"
+                  />
+                </div>
                 <p className="font-mono text-xs break-all text-white">
-                  0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8
+                  0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE
                 </p>
               </div>
             </div>

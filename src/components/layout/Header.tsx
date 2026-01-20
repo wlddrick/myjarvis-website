@@ -59,8 +59,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             <CopyButton
-              text="0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8"
-              displayText="Contract 0xeC..."
+              text="0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
+              displayText="Contract 0xE8..."
               variant="ghost"
               className="hover:bg-accent"
             />
@@ -106,8 +106,8 @@ const Header = () => {
             <div className="container py-6 flex flex-col space-y-4">
               <div className="flex justify-center">
                 <CopyButton
-                  text="0xeC93Eb5A2E07fE30d6658321B8fAa33B6D588cA8"
-                  displayText="Contract 0xeC..."
+                  text="0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
+                  displayText="Contract 0xE8..."
                   variant="outline"
                   className="w-full justify-center"
                 />

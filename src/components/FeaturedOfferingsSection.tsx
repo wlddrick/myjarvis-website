@@ -74,7 +74,7 @@ Best regards,`
   };
 
   return (
-    <section id="featured-offerings" className="w-full py-4 md:py-8 lg:py-10 bg-background">
+    <section id="featured-offerings" className="w-full py-6 md:py-12 lg:py-16 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
@@ -95,7 +95,7 @@ Best regards,`
                 inactiveZone={0.01}
                 borderWidth={3}
               />
-              <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-[0.75px] bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
+              <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-none bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
                 <CardHeader>
                   <CardTitle className="text-xl">{offering.title}</CardTitle>
                   <CardDescription className="text-sm">{offering.description}</CardDescription>

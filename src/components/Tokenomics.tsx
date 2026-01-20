@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, DollarSign, Flame } from 'lucide-react';
 import { InteractivePieChart } from "@/components/ui/interactive-pie-chart";
 import { CopyButton } from "@/components/ui/copy-button";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Tokenomics = () => {
   const tokenDistributionData = [
@@ -26,7 +27,7 @@ const Tokenomics = () => {
   ];
 
   return (
-    <section id="tokenomics" className="w-full py-4 md:py-8 lg:py-10 bg-gradient-to-b from-background to-muted/20">
+    <section id="tokenomics" className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-b from-background to-muted/20">
       <div className="container px-4 md:px-6">
         {/* Token Distribution Section */}
         <div className="text-center mb-16">
@@ -129,51 +130,82 @@ const Tokenomics = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Platform Revenue */}
-              <Card className="relative group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
-                    <TrendingUp className="h-8 w-8 text-background" />
-                  </div>
-                  <CardTitle className="text-xl">Platform Revenue</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">
-                    Generated through Agents as a service, Automations as one time buy, and other premium features
-                  </p>
-                </CardContent>
-
-              </Card>
+              <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={3}
+                  variant="green"
+                />
+                <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-none bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                      <TrendingUp className="h-8 w-8 text-background" />
+                    </div>
+                    <CardTitle className="text-xl">Platform Revenue</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground">
+                      Generated through Agents as a service, Automations as one time buy, and other premium features
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Buyback Mechanism */}
-              <Card className="relative group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
-                    <DollarSign className="h-8 w-8 text-background" />
-                  </div>
-                  <CardTitle className="text-xl">Buyback Mechanism</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">
-                    A percentage of profit generated is used to purchase tokens from the market
-                  </p>
-                </CardContent>
-
-              </Card>
+              <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={3}
+                  variant="blue"
+                />
+                <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-none bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                      <DollarSign className="h-8 w-8 text-background" />
+                    </div>
+                    <CardTitle className="text-xl">Buyback Mechanism</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground">
+                      A percentage of profit generated is used to purchase tokens from the market
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Burn Mechanism */}
-              <Card className="group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-gray-300">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
-                    <Flame className="h-8 w-8 text-background" />
-                  </div>
-                  <CardTitle className="text-xl">Burn Mechanism</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">
-                    50% percent of buyback tokens gets burned permanently
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  borderWidth={3}
+                  variant="fire"
+                />
+                <Card className="relative flex flex-col h-full overflow-hidden rounded-xl border-none bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center mb-4">
+                      <Flame className="h-8 w-8 text-background" />
+                    </div>
+                    <CardTitle className="text-xl">Burn Mechanism</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground">
+                      50% percent of buyback tokens gets burned permanently
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
 
