@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Brain, Zap, ShieldCheck, Scale, TrendingUp, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const features = [
   {
@@ -63,8 +64,17 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3"
             >
-              <Card className="flex flex-col items-center text-center h-full p-6">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={3}
+              />
+              <Card className="relative flex flex-col items-center text-center h-full p-6 border-none bg-background shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
                 <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
                   <feature.icon className="h-8 w-8" />
                 </div>

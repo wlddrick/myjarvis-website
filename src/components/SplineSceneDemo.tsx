@@ -27,7 +27,7 @@ export function SplineSceneDemo() {
       />
 
       {/* Background grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] bg-[size:64px_64px] opacity-30"></div>
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8">

@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { BackgroundBlobs } from "@/components/ui/background-blobs";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <BackgroundBlobs />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">{children}</main>

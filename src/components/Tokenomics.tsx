@@ -28,8 +28,9 @@ const Tokenomics = () => {
   ];
 
   return (
-    <section id="tokenomics" className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-b from-background to-muted/20 overflow-hidden">
-      <div className="container px-4 md:px-6">
+    <section id="tokenomics" className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-b from-background to-muted/20 overflow-hidden relative">
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+      <div className="container px-4 md:px-6 relative z-10">
         {/* Token Distribution Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -28,7 +28,7 @@ export const InteractivePieChart: React.FC<InteractivePieChartProps> = ({ data, 
     },
     tooltip: {
       trigger: 'item',
-      formatter: '{a} <br/>{b}: {c} ({d}%)',
+      formatter: '{b}: {c} ({d}%)',
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
       borderColor: 'transparent',
       textStyle: {
@@ -40,14 +40,14 @@ export const InteractivePieChart: React.FC<InteractivePieChartProps> = ({ data, 
     },
     series: [
       {
-        name: 'Token Distribution',
+        name: 'Distribution',
         type: 'pie',
-        radius: ['40%', '70%'], // Donut style
+        radius: ['45%', '75%'], // Slightly larger donut
         center: ['50%', '50%'],
         avoidLabelOverlap: false,
         itemStyle: {
           borderRadius: 8,
-          borderColor: '#fff',
+          borderColor: '#000',
           borderWidth: 2
         },
         label: {
@@ -55,10 +55,7 @@ export const InteractivePieChart: React.FC<InteractivePieChartProps> = ({ data, 
         },
         emphasis: {
           label: {
-            show: true,
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: '#333'
+            show: false, // Remove background ghost text
           },
           itemStyle: {
             shadowBlur: 10,
