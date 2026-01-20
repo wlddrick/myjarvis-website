@@ -47,7 +47,7 @@ export function SplineSceneDemo() {
               <Button
                 onClick={handleScrollToFeatures}
                 size="lg"
-                className="bg-white text-black px-8 py-3 text-base font-medium shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-gray-100 group"
+                className="bg-white text-black px-8 py-3 text-base font-medium shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-300 hover:bg-gray-100 group"
               >
                 Explore Features
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform ml-2" />
@@ -57,7 +57,7 @@ export function SplineSceneDemo() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-base font-medium transition-all duration-300 group"
+                className="border-blue-500/20 text-white hover:bg-blue-500/10 px-8 py-3 text-base font-medium transition-all duration-300 group shadow-[0_0_10px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:border-blue-500/40"
               >
                 <Link
                   href="https://x.com/use_jarvis/status/2006742876831801500?s=20"

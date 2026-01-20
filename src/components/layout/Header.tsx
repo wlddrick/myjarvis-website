@@ -76,12 +76,12 @@ const Header = () => {
                 Buy on Virtuals
               </Link>
             </Button>
-            <Button
+            {/* <Button
               className="bg-white text-black hover:bg-gray-200"
               onClick={handleOpenAppClick}
             >
               Open App
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -125,12 +125,12 @@ const Header = () => {
                   Buy on Virtuals
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 className="w-full bg-white text-black hover:bg-gray-200 text-lg"
                 onClick={handleOpenAppClick}
               >
                 Open App
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         )}
