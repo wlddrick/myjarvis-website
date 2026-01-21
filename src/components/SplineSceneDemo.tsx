@@ -20,7 +20,7 @@ export function SplineSceneDemo() {
   };
 
   return (
-    <section className="w-full min-h-[600px] bg-black relative overflow-hidden">
+    <section className="w-full min-h-[600px] bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 relative overflow-hidden">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"

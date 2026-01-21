@@ -36,8 +36,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
+        <div className="container flex h-16 items-center justify-between relative z-10">
           <div className="flex items-center">
             <div className="mr-6 flex items-center space-x-2">
               <div className="flex items-center space-x-2">
