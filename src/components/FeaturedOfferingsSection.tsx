@@ -67,7 +67,9 @@ const FeaturedOfferingsSection = () => {
       document.body.appendChild(script);
 
       return () => {
-        document.body.removeChild(script);
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
       };
     }
   }, [selectedOffering]);
@@ -153,8 +155,12 @@ Best regards,`
             <DialogHeader>
               <DialogTitle>Book a Demo for {selectedOffering?.title}</DialogTitle>
             </DialogHeader>
-            <div className="flex-1 w-full h-full relative">
-              <div className="calendly-inline-widget w-full h-full" data-url="https://calendly.com/wlddrickmorty/30min" style={{ minWidth: '320px', height: '100%' }}></div>
+            <div className="flex-1 w-full h-full relative flex justify-center items-center">
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/wlddrickmorty/30"
+                style={{ minWidth: '320px', height: '700px', width: '100%' }}
+              ></div>
             </div>
           </DialogContent>
         </Dialog>
