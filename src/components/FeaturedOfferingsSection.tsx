@@ -130,7 +130,7 @@ Best regards,`
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <div className="flex flex-col gap-2">
-                    <Button className="w-full" onClick={() => handleBookDemo(offering)}>Book a Live Demo</Button>
+                    <Button className="w-full shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-300" onClick={() => handleBookDemo(offering)}>Book a Discovery Call</Button>
                     <Button variant="outline" className="w-full" asChild>
                       <Link href={offering.demoUrl} target="_blank" rel="noopener noreferrer">
                         Watch Demo
@@ -153,7 +153,7 @@ Best regards,`
         <Dialog open={!!selectedOffering} onOpenChange={(open) => !open && setSelectedOffering(null)}>
           <DialogContent className="sm:max-w-[1000px] h-[800px] overflow-hidden flex flex-col">
             <DialogHeader>
-              <DialogTitle>Book a Demo for {selectedOffering?.title}</DialogTitle>
+              <DialogTitle>Book a Discovery Call for {selectedOffering?.title}</DialogTitle>
             </DialogHeader>
             <div className="flex-1 w-full h-full relative flex justify-center items-center">
               <div

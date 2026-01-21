@@ -24,8 +24,9 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="w-full py-6 md:py-12 lg:py-16 bg-background">
-      <div className="container px-4 md:px-6">
+    <section className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-b from-background via-background to-blue-950/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+      <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,9 +36,7 @@ const HowItWorks = () => {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How My Jarvis Works</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Get started with AI in three simple steps.
-            </p>
+
           </div>
         </motion.div>
         <div className="grid gap-8 md:grid-cols-3">

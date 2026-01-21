@@ -7,11 +7,22 @@ import { Button } from "@/components/ui/button";
 import { ComingSoonDialog } from "@/components/ui/coming-soon-dialog";
 import { CopyButton } from "@/components/ui/copy-button";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Header = () => {
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > previous && latest > 50) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  });
 
   const handleScrollToTokenomics = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -36,7 +47,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 relative overflow-hidden">
+      <motion.header
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
+        }}
+        animate={isVisible ? "visible" : "hidden"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="sticky top-0 z-50 w-full bg-blue-950/20 backdrop-blur supports-[backdrop-filter]:bg-blue-950/20 relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40"></div>
         <div className="container flex h-16 items-center justify-between relative z-10">
           <div className="flex items-center">
@@ -93,7 +112,7 @@ const Header = () => {
             </Button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>

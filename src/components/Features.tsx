@@ -40,8 +40,9 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="w-full py-6 md:py-12 lg:py-16 bg-background">
-      <div className="container px-4 md:px-6">
+    <section className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-b from-background via-background to-blue-950/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+      <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
