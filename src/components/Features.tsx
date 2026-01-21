@@ -24,7 +24,7 @@ const features = [
   {
     icon: Scale,
     title: "Scalable Solutions",
-    description: "Our platform grows with your business, offering flexible solutions for individuals, small businesses, and marketers.",
+    description: "We integrate our agents into your existing systems, scaling effortlessly from individuals to growing teams and marketers.",
   },
   {
     icon: ShieldCheck,

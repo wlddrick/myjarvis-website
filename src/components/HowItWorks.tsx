@@ -18,7 +18,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Automate & Grow",
-    description: "Launch your AI to handle tasks, engage customers, and streamline operations, driving efficiency and growth.",
+    description: "Use your AI to handle tasks, engage customers, and streamline operations, driving efficiency and growth. All in house",
   },
 ];
 
