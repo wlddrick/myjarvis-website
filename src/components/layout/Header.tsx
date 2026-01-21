@@ -78,12 +78,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <CopyButton
-              text="0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
-              displayText="Contract 0xE8..."
-              variant="ghost"
-              className="hover:bg-accent"
-            />
+
             <Button variant="ghost" className="hover:bg-accent" onClick={handleScrollToTokenomics}>
               Tokenomics
             </Button>
@@ -93,7 +88,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Buy on Virtuals
+                Buy $JARVIS
               </Link>
             </Button>
             {/* <Button
@@ -124,14 +119,7 @@ const Header = () => {
             className="fixed inset-0 z-40 top-16 bg-background border-b md:hidden"
           >
             <div className="container py-6 flex flex-col space-y-4">
-              <div className="flex justify-center">
-                <CopyButton
-                  text="0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
-                  displayText="Contract 0xE8..."
-                  variant="outline"
-                  className="w-full justify-center"
-                />
-              </div>
+
               <Button variant="ghost" className="w-full justify-start text-lg" onClick={handleScrollToTokenomics}>
                 Tokenomics
               </Button>
@@ -142,7 +130,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Buy on Virtuals
+                  Buy $JARVIS
                 </Link>
               </Button>
               {/* <Button

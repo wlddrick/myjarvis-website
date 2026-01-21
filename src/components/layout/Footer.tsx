@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-black text-white relative overflow-hidden">
+    <footer id="contact" className="bg-gradient-to-b from-black to-blue-950/20 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
       <div className="container py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,9 +96,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-semibold text-lg text-white">$JARVIS Token</h4>
             <div className="space-y-3 text-gray-300 text-sm">
-              <p className="leading-relaxed">
-                Join the ecosystem and benefit from our innovative buyback and burn mechanism.
-              </p>
+
               <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-xs text-gray-400">Contract Address:</p>
@@ -111,6 +111,15 @@ const Footer = () => {
                   0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE
                 </p>
               </div>
+              <Button asChild variant="outline" className="w-full border-blue-500/20 text-white hover:bg-blue-500/10 font-medium transition-all duration-300 shadow-[0_0_10px_rgba(59,130,246,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:border-blue-500/40">
+                <Link
+                  href="https://app.virtuals.io/prototypes/0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy $JARVIS
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -121,11 +130,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} My Jarvis. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-gray-400 text-sm">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Tokenomics</a>
-            </div>
+
           </div>
         </div>
       </div>
