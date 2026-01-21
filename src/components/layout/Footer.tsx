@@ -32,18 +32,34 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a> */}
               <a href="https://x.com/use_jarvis" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
-                <Twitter className="h-5 w-5" />
+                <Image
+                  src="/twitter-icon.png"
+                  alt="Twitter"
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 object-contain"
+                  unoptimized
+                />
               </a>
               <a href="https://t.me/+9vEyNYK4aiw0ZGNl" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.891 7.02l-2.003 9.441c-.151.666-.545.83-.1.1.583-.15 3.016-1.921 4.542-1.228-.314.164-.536.416-.536.416-.43 1.102-1.62 1.053-1.62 1.053-1.587-.066-2.427-1.066-2.427-1.066-.703-.865-.1.1-.113.14-.01.033-.11.14-.11.14l-3.21 2.323c-.391.282-.676.121-.861-.122l-1.928-2.52c-.173-.227-.13-.497.1-.641l7.635-4.814c.338-.213.648-.1.4.162z" />
-                  <path d="M11.944 0C5.352 0 0 5.352 0 11.944s5.352 11.944 11.944 11.944 11.944-5.352 11.944-11.944S18.536 0 11.944 0zm5.437 8.3c-.157.854-1.341 5.794-1.946 8.525-.256 1.155-.76 1.541-1.171 1.579-.893.081-1.571-.591-2.435-1.157-1.354-.887-2.118-1.439-3.433-2.304-1.521-1-0.535-1.551.332-2.451.227-.235 4.169-3.819 4.245-4.14.009-.041.018-.194-.074-.275-.092-.081-.227-.053-.325-.031-.139.031-2.355 1.493-6.643 4.385-.628.432-1.198.644-1.708.633-.563-.012-1.644-.319-2.451-.581-.987-.321-1.775-.491-1.706-.827.036-.176.278-.356.726-.541 2.834-1.233 4.706-2.046 5.613-2.378 2.628-1.002 3.174-1.171 3.53-1.171.078 0 .252.019.366.064.095.038.227.106.29.171.063.065.122.152.122.305 0 .1-.002.176-.008.23z" />
-                </svg>
+                <Image
+                  src="/telegram-icon.png"
+                  alt="Telegram"
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 object-contain"
+                  unoptimized
+                />
+              </a>
+              <a href="https://app.virtuals.io/prototypes/0xE8d90739ACf0f7Dcbc4e573d61c85555B17Fd8aE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
+                <Image
+                  src="/virtuals-icon.png"
+                  alt="Virtuals"
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 object-contain"
+                  unoptimized
+                />
               </a>
               {/* <a href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
                 <Linkedin className="h-5 w-5" />
