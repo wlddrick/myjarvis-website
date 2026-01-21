@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -10,8 +10,6 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -60,6 +58,19 @@ const FeaturedOfferingsSection = () => {
   const handleBookDemo = (offering: typeof featuredOfferings[0]) => {
     setSelectedOffering(offering);
   };
+
+  useEffect(() => {
+    if (selectedOffering) {
+      const script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [selectedOffering]);
 
   const getEmailContent = (offeringTitle: string) => {
     return {
@@ -138,42 +149,13 @@ Best regards,`
 
 
         <Dialog open={!!selectedOffering} onOpenChange={(open) => !open && setSelectedOffering(null)}>
-          <DialogContent className="sm:max-w-[425px]">
+          <DialogContent className="sm:max-w-[1000px] h-[800px] overflow-hidden flex flex-col">
             <DialogHeader>
-              <DialogTitle>Enquire about {selectedOffering?.title}</DialogTitle>
-              <DialogDescription>
-                Send us an email to finalize your purchase. We've prepared a draft for you.
-              </DialogDescription>
+              <DialogTitle>Book a Demo for {selectedOffering?.title}</DialogTitle>
             </DialogHeader>
-            {selectedOffering && (
-              <div className="grid gap-4 py-4">
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="email-preview" className="text-sm font-medium">
-                    To:
-                  </label>
-                  <div className="p-2 border rounded-md text-sm bg-muted text-muted-foreground">
-                    help@myjarvis.tech
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium">Message Preview:</label>
-                  <div className="p-3 border rounded-md text-sm bg-muted/50 whitespace-pre-wrap h-[150px] overflow-y-auto">
-                    {getEmailContent(selectedOffering.title).body}
-                  </div>
-                </div>
-              </div>
-            )}
-            <DialogFooter className="flex-col sm:flex-row gap-2">
-              {selectedOffering && (
-                <Button className="w-full sm:w-auto" asChild>
-                  <a
-                    href={`mailto:help@myjarvis.tech?subject=${encodeURIComponent(getEmailContent(selectedOffering.title).subject)}&body=${encodeURIComponent(getEmailContent(selectedOffering.title).body)}`}
-                  >
-                    Open Mail App
-                  </a>
-                </Button>
-              )}
-            </DialogFooter>
+            <div className="flex-1 w-full h-full relative">
+              <div className="calendly-inline-widget w-full h-full" data-url="https://calendly.com/wlddrickmorty/30min" style={{ minWidth: '320px', height: '100%' }}></div>
+            </div>
           </DialogContent>
         </Dialog>
       </div>
